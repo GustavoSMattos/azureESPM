@@ -1,0 +1,21 @@
+{
+	"name": "Parquet1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorageIngestion",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "@dataset.file",
+				"folderPath": "@dataset.folder",
+				"fileSystem": "@dataset.container"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}
